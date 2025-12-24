@@ -9,23 +9,25 @@ body, html {
     font-family: 'Raleway', 'Helvetica', sans-serif;
     background-color: #ffffff;
     color: #000000;
-    overflow: hidden; /* Evita scroll innecesario en móvil */
+    overflow: hidden;
 }
 
+/* Regla para todas las pantallas */
 .screen {
-    display: none;
+    display: none; 
     height: 100vh;
     width: 100vw;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* ESTO CENTRA TODO VERTICALMENTE */
+    justify-content: center; 
+    /* ESTO CENTRA TODO HORIZONTALMENTE */
+    align-items: center;     
     padding: 30px;
     text-align: center;
-    transition: all 0.5s ease;
 }
 
 .active {
-    display: flex;
+    display: flex; 
 }
 
 h1 {
@@ -33,11 +35,12 @@ h1 {
     letter-spacing: 2px;
     margin-bottom: 40px;
     line-height: 1.4;
+    font-size: 24px;
 }
 
 input {
     border: 2px solid #000;
-    border-radius: 0; /* Estilo minimalista cuadrado */
+    border-radius: 0;
     padding: 15px;
     font-size: 18px;
     width: 90%;
@@ -45,7 +48,7 @@ input {
     outline: none;
     font-family: inherit;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -62,20 +65,34 @@ button {
     max-width: 300px;
 }
 
-/* Pantalla Final: Imagen de fondo */
+
 #pantalla-final {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('pet.png');
-    justify-content: flex-end; /* Mueve el botón hacia abajo para que se vea la foto */
-    padding-bottom: 50px;
+    background-image: url('URL_DE_TU_IMAGEN_AQUI');
+    
+    /* Cambiamos a posición relativa para que el botón se ubique respecto a la pantalla */
+    position: relative; 
+    justify-content: flex-end; 
 }
 
 #btn-control-audio {
-    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para no tapar tanto */
-    border: 1px solid #fff;
-    font-size: 12px;
+    background: rgba(0, 0, 0, 0.8); /* Un poco más oscuro para que resalte */
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 14px;
     width: auto;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    
+    /* Posicionamiento fijo para asegurar visibilidad */
+    position: absolute;
+    bottom: 40px; /* Separación del borde inferior */
+    z-index: 999; /* Asegura que esté por encima de la imagen */
+    
+    /* Centrado horizontal manual ya que usamos absolute */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    border-radius: 5px; /* Un poco de redondeado para que se note que es botón */
 }

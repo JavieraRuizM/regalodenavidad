@@ -9,25 +9,23 @@ body, html {
     font-family: 'Raleway', 'Helvetica', sans-serif;
     background-color: #ffffff;
     color: #000000;
-    overflow: hidden;
+    overflow: hidden; /* Evita scroll innecesario en móvil */
 }
 
-/* Regla para todas las pantallas */
 .screen {
-    display: none; 
+    display: none;
     height: 100vh;
     width: 100vw;
     flex-direction: column;
-    /* ESTO CENTRA TODO VERTICALMENTE */
-    justify-content: center; 
-    /* ESTO CENTRA TODO HORIZONTALMENTE */
-    align-items: center;     
+    justify-content: center;
+    align-items: center;
     padding: 30px;
     text-align: center;
+    transition: all 0.5s ease;
 }
 
 .active {
-    display: flex; 
+    display: flex;
 }
 
 h1 {
@@ -35,12 +33,11 @@ h1 {
     letter-spacing: 2px;
     margin-bottom: 40px;
     line-height: 1.4;
-    font-size: 24px;
 }
 
 input {
     border: 2px solid #000;
-    border-radius: 0;
+    border-radius: 0; /* Estilo minimalista cuadrado */
     padding: 15px;
     font-size: 18px;
     width: 90%;
@@ -48,7 +45,7 @@ input {
     outline: none;
     font-family: inherit;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 button {
@@ -65,23 +62,20 @@ button {
     max-width: 300px;
 }
 
-/* Ajuste específico SOLO para la pantalla final */
+/* Pantalla Final: Imagen de fondo */
 #pantalla-final {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('pet.png');
-    
-    /* Cambiamos el centrado vertical a "empujar al fondo" 
-       para que el botón de pausa quede abajo y se vea la foto */
-    justify-content: flex-end; 
-    padding-bottom: 60px;
+    justify-content: flex-end; /* Mueve el botón hacia abajo para que se vea la foto */
+    padding-bottom: 50px;
 }
 
 #btn-control-audio {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para no tapar tanto */
     border: 1px solid #fff;
     font-size: 12px;
     width: auto;
-    padding: 12px 25px;
+    padding: 10px 20px;
 }

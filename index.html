@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Navidad - Regalo Especial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="pantalla-1" class="screen active">
+        <h1>INGRESA LA CLAVE</h1>
+        <input type="password" id="passwordInput" placeholder="Clave mágica...">
+        <button onclick="verificarPassword()">Entrar</button>
+    </section>
+
+    <section id="pantalla-2" class="screen">
+        <h1>¿Están preparados para conocer su regalo?</h1>
+        <button onclick="mostrarFinal()">¡SÍ, ESTAMOS LISTOS!</button>
+    </section>
+
+    <section id="pantalla-final" class="screen">
+        <audio id="musica" src="domimo.m4a" loop></audio>
+        <button id="btn-control-audio" onclick="toggleAudio()">Pausar Música</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -70,7 +70,7 @@ button {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('URL_DE_TU_IMAGEN_AQUI');
+    background-image: url('pet.png');
     
     /* Cambiamos el centrado vertical a "empujar al fondo" 
        para que el botón de pausa quede abajo y se vea la foto */
